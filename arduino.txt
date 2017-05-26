@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Evan Shebel Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+	.jumbotron {
+      background-image: url("./uav/2C.jpg");
+
+      background-color: #D0D1D7;
+      margin-bottom: 0;`enter code here`0
+      min-height: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Portfolio</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./Projects.html">Projects</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+		<li><a href="./resume.html">Resume</a></li>
+      </ul>
+     </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <div class="container-fluid">
+        <h1><font color="white" >UAV-Solutions Prototype UAV</font></h1>
+    </div>
+  </div>
+</div>
+  
+<div class="container-fluid bg-3 text-center">    
+  <h3>Prototype UAV with a Focus on Improving Flight Time and Portability</h3><br>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-4">
+
+      <img src="./uav/1.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+ 
+      <img src="./uav/2.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+
+      <img src="./uav/6.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div><br>
+
+
+<div class="container text-left"> 
+<font size="4">
+	
+	<ul>
+		<li>Worked among a five person team to redesign a quad rotor frame UAV for UAV Solutions. 
+		</li>
+		<li>Aimed to achieve an increase in portability by having the frame fold to a volume small enough to fit into a police cruiser’s trunk.
+		</li>
+		<li>Used lightweight materials such as carbon fiber to increase flight time; with the goal of 60 minutes of mission time.
+			</li>
+		<li>Utilized management and organizational tools such as a system boundary diagram, system requirements specification, conceptual design review, production schedule, Gantt chart, and bill of materials throughout the design and build phases.
+		</li>
+	</ul>
+	</div>
+</div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-4">
+    
+      <img src="./uav/4.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+   
+      <img src="./uav/9.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-4"> 
+   
+      <img src="./uav/3.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-md-3">
+    
+      <img src="./uav/10.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-md-3"> 
+  
+      <img src="./uav/11.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-md-3"> 
+
+      <img src="./uav/13.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-md-3">
+    
+      <img src="./uav/15.jpg" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div><br><br>
