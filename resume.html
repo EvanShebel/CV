@@ -20,20 +20,37 @@
       padding: 25px;
     }
 	
-	.jumbotron {
-/*       background-image: url("./md.jpg");		 */
+    .jumbotron {
       background-color: #000000;
-      margin-bottom: 10;`enter code here`0
+      margin-bottom: 10px; /* Fixed typo: removed erroneous "100" */
       min-height: 50%;
-	  
       background-position: center;
       -webkit-background-size: cover;
       background-size: cover;
     }
-	
-	
-	
-</style>
+
+    /* Style for iframe container */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      max-width: 640px; /* Default max width */
+      margin: 0 auto; /* Center the iframe */
+    }
+
+    /* Default iframe styling */
+    iframe {
+      width: 100%;
+      height: 823px; /* Default height */
+      border: none;
+    }
+
+    /* Media query for mobile devices */
+    @media (max-width: 767px) {
+      .iframe-container {
+        max-width: 100%; /* Full width on mobile */
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -49,29 +66,52 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href= "./index.html">Home</a></li>
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./projects.html">Projects</a></li>
         <li><a href="./contact.html">Contact</a></li>
-		<li class="active"><a href="./resume.html">Resume</a>
+        <li class="active"><a href="./resume.html">Resume</a></li>
       </ul>
-     </div>
+    </div>
   </div>
 </nav>
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h1><font color="white" >Evan Shebel</font></h1>      
-    <p><font color="white" >Mechanical Engineer, Data Analyst</font></p>
+    <h1><font color="white">Evan Shebel</font></h1>      
+    <p><font color="white">Mechanical Engineer, Data Analyst</font></p>
   </div>
 </div>
 
 <div class="container-fluid bg-12 text-center">
-<div class="container text-center">    
-
-<!--old resume ~2017 <iframe src="https://drive.google.com/file/d/0B7xsCO3aTKd2M05YMVl3MmpfZXc/preview" width="640" height="823"></iframe> -->
-	 <iframe src="https://docs.google.com/document/d/1sW77Pa4B_WpQxNWoH_McPQxiM4-Y2hn4/preview" width="640" height="823"></iframe>
-</div>
+  <div class="container text-center">    
+    <div class="iframe-container">
+      <iframe src="https://docs.google.com/document/d/1sW77Pa4B_WpQxNWoH_McPQxiM4-Y2hn4/preview" allowfullscreen></iframe>
+    </div>
+  </div>
 </div><br>
 
+<script>
+  // JavaScript to dynamically adjust iframe height based on screen ratio
+  function resizeIframe() {
+    const iframe = document.querySelector('iframe');
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const isPortrait = height > width; // Check if screen is in portrait mode
 
+    if (width <= 767) { // Mobile breakpoint aligned with Bootstrap
+      iframe.style.height = isPortrait 
+        ? `${Math.min(height * 0.8, 823)}px` // Portrait: 80% of screen height, capped at 823px
+        : `${Math.min(height * 1.2, 823)}px`; // Landscape: 120% of screen height, capped at 823px
+    } else {
+      iframe.style.height = '823px'; // Default height for desktop
+    }
+  }
 
+  // Run on load and when window resizes or orientation changes
+  window.addEventListener('load', resizeIframe);
+  window.addEventListener('resize', resizeIframe);
+  window.addEventListener('orientationchange', resizeIframe);
+</script>
+
+</body>
+</html>
