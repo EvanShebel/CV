@@ -29,25 +29,43 @@
       background-size: cover;
     }
 
-    /* Style for iframe container */
+  /* Style for iframe container */
     .iframe-container {
       position: relative;
       width: 100%;
-      max-width: 640px; /* Default max width */
+      max-width: 640px; /* Default max width for desktop */
       margin: 0 auto; /* Center the iframe */
+      overflow: hidden; /* Prevent overflow on scaling */
     }
 
     /* Default iframe styling */
     iframe {
       width: 100%;
-      height: 823px; /* Default height */
+      height: 823px; /* Default height for desktop */
       border: none;
+      display: block; /* Remove inline spacing */
     }
 
-    /* Media query for mobile devices */
+    /* Media query for mobile devices (iPhone typically < 767px) */
     @media (max-width: 767px) {
       .iframe-container {
         max-width: 100%; /* Full width on mobile */
+      }
+      iframe {
+        /* Scale down the iframe content */
+        transform: scale(0.75); /* Adjust scale factor (0.75 = 75% size) */
+        transform-origin: top left; /* Scale from top-left corner */
+        width: 133.33%; /* Compensate for scaling: 100% / 0.75 */
+        height: 1097px; /* Adjusted height: 823px / 0.75 */
+      }
+    }
+
+    /* Extra small screens (e.g., iPhone SE, < 576px) */
+    @media (max-width: 576px) {
+      iframe {
+        transform: scale(0.6); /* Further scale down for smaller screens */
+        width: 166.67%; /* 100% / 0.6 */
+        height: 1371px; /* 823px / 0.6 */
       }
     }
   </style>
@@ -91,23 +109,21 @@
 </div><br>
 
 <script>
-  // JavaScript to dynamically adjust iframe height based on screen ratio
+// Optional: Dynamic height adjustment (can be removed if scaling works well)
   function resizeIframe() {
     const iframe = document.querySelector('iframe');
     const width = window.innerWidth;
     const height = window.innerHeight;
-    const isPortrait = height > width; // Check if screen is in portrait mode
+    const isPortrait = height > width;
 
-    if (width <= 767) { // Mobile breakpoint aligned with Bootstrap
-      iframe.style.height = isPortrait 
-        ? `${Math.min(height * 0.8, 823)}px` // Portrait: 80% of screen height, capped at 823px
-        : `${Math.min(height * 1.2, 823)}px`; // Landscape: 120% of screen height, capped at 823px
+    if (width <= 767) {
+      // Height dynamically adjusts based on scaling factor
+      iframe.style.height = (width <= 576) ? '1371px' : '1097px';
     } else {
-      iframe.style.height = '823px'; // Default height for desktop
+      iframe.style.height = '823px'; // Default for desktop
     }
   }
 
-  // Run on load and when window resizes or orientation changes
   window.addEventListener('load', resizeIframe);
   window.addEventListener('resize', resizeIframe);
   window.addEventListener('orientationchange', resizeIframe);
