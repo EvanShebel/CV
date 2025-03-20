@@ -41,7 +41,48 @@
       -webkit-background-size: cover;
       background-size: cover;
     }
-	
+
+.compact-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+  }
+  .compact-table th, .compact-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #ccc;
+  }
+  .compact-table th {
+    background-color: #000000;
+    color: white;
+    font-weight: 500;
+  }
+  .compact-table td {
+    background-color: #fff;
+  }
+  .compact-table ul {
+    margin: 0;
+    padding-left: 15px;
+  }
+  @media (max-width: 767px) {
+    .compact-table th, .compact-table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .compact-table tr {
+      margin-bottom: 10px;
+      display: block;
+      border: 1px solid #ccc;
+    }
+    .compact-table th {
+      border-bottom: none;
+    }
+  }
 	
 	
 </style>
@@ -99,7 +140,7 @@
 <div class="container-fluid text-center">
   <div class="row">
     <div class="col-md-8 col-md-offset-2"> <!-- Centers table within a narrower column -->
-      <table border="1" style="width: 100%; margin: 0 auto;">
+      <table class="compact-table">
 	      
         <tr>
           <th>Experience</th>
@@ -115,7 +156,7 @@
             </ul>
           </td>
           <td> 
-Designed many iterations to devlop a novel frame and fork design to improve aerodynadmics. Design is made to accomodate the manufactuirng method that balances cost, weight, and complexity.
+Designed many iterations to develop a novel frame and fork design to improve aerodynamics. Design is made to accomodate the manufactuirng method that balances cost, weight, and complexity.
 		   One goal is to have a frame that does not require a jig. Sub-assemblies will have indexing points.
 	  </td>
         </tr>
@@ -201,7 +242,7 @@ Designed many iterations to devlop a novel frame and fork design to improve aero
 <div class="container-fluid text-center">
   <div class="row">
     <div class="col-md-8 col-md-offset-2"> <!-- Centers table within a narrower column -->
-      <table border="1" style="width: 100%; margin: 0 auto;">
+      <table class="compact-table">
     <tr>
       <th>Engineering/CAD Technical Skills</th>
       <th>Data Analyst Technical Skills</th>
